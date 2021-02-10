@@ -18,6 +18,7 @@ export class CaptchaComponent implements OnChanges {
   captch_input:any = null;
   code: any = null;
   resultCode:any = null;
+  disable = false;
   constructor(private captchService:CaptchaService){}
   ngOnChanges() {
     if (this.config) {
@@ -109,6 +110,7 @@ export class CaptchaComponent implements OnChanges {
   }
 
   checkCaptcha() {
+    this.disable = true
     if (this.captch_input != this.resultCode) {
       this.captchService.setCaptchaStatus(false);
       

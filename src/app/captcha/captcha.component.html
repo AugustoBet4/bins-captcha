@@ -4,7 +4,7 @@
 
     <div class="captcha-actions">
   <input type="text" [(ngModel)]="captch_input" />
-  <input type="button" value="Check" (click)="checkCaptcha()" />
+  <input type="button" value="Enviar" (click)="checkCaptcha()" [disabled]='disable' />
   <a href="javascript:void(0)" class="cpt-btn" (click)="playCaptcha()">🔈</a>
     <a href="javascript:void(0)" class="cpt-btn reload" (click)="createCaptcha()">&#x21bb;</a>
 </div>
